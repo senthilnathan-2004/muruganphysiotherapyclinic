@@ -94,7 +94,16 @@ export default function BlogGrid({ posts, lang }: BlogGridProps) {
             <BookOpen className="w-4 h-4 text-teal" />
             <span>{t.blogBadge}</span>
           </div>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-brand-ink mb-4">{t.blogTitle}</h2>
+          <h2 className="font-heading font-bold text-2xl xs:text-3xl sm:text-4xl text-brand-ink mb-4">
+            <span className="sm:hidden">
+              {lang === "en"
+                ? "Health & Recovery Tips"
+                : lang === "ta"
+                ? "மருத்துவக் குறிப்புகள்"
+                : t.blogTitle}
+            </span>
+            <span className="hidden sm:inline">{t.blogTitle}</span>
+          </h2>
           <p className="text-brand-muted text-sm sm:text-base">{t.blogDesc}</p>
         </motion.div>
 

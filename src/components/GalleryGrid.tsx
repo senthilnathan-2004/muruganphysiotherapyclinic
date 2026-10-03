@@ -193,8 +193,15 @@ export default function GalleryGrid({ gallery, lang }: GalleryGridProps) {
             <Eye className="w-3.5 h-3.5 text-teal" />
             <span>{t.galleryBadge}</span>
           </div>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl text-brand-ink mb-3 tracking-tight">
-            {t.galleryTitle}
+          <h2 className="font-heading font-extrabold text-2xl xs:text-3xl sm:text-4xl text-brand-ink mb-3 tracking-tight">
+            <span className="sm:hidden">
+              {lang === "en"
+                ? "Our Clinic & Facilities"
+                : lang === "ta"
+                ? "மருத்துவமனை ஒரு பார்வை"
+                : t.galleryTitle}
+            </span>
+            <span className="hidden sm:inline">{t.galleryTitle}</span>
           </h2>
           <p className="text-brand-muted text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             {t.galleryDesc}

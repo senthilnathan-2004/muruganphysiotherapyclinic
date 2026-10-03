@@ -220,7 +220,16 @@ export default function BookingForm({ doctors, lang }: BookingFormProps) {
                   <Calendar className="w-4 h-4 text-pink-safe" />
                   <span>{t.bookingBadge}</span>
                 </div>
-                <h2 className="font-heading font-bold text-2xl sm:text-3xl text-brand-ink mb-4 sm:mb-6">{t.bookingTitle}</h2>
+                <h2 className="font-heading font-bold text-xl xs:text-2xl sm:text-3xl text-brand-ink mb-4 sm:mb-6">
+                  <span className="sm:hidden">
+                    {lang === "en"
+                      ? "Book an Appointment"
+                      : lang === "ta"
+                      ? "முன்பதிவு செய்க"
+                      : t.bookingTitle}
+                  </span>
+                  <span className="hidden sm:inline">{t.bookingTitle}</span>
+                </h2>
                 <p className="text-brand-muted text-xs sm:text-sm leading-relaxed mb-6 sm:mb-8">{t.bookingDesc}</p>
                 <div className="space-y-3 sm:space-y-4">
                   {[t.bookingBullet1, t.bookingBullet2, t.bookingBullet3].map((b, i) => (

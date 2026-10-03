@@ -212,8 +212,15 @@ export default function Testimonials({ reviews, lang }: TestimonialsProps) {
             <Star className="w-4 h-4 fill-pink-safe text-pink-safe" />
             <span>{t.reviewsBadge}</span>
           </div>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-brand-ink mb-4">
-            {t.reviewsTitle}
+          <h2 className="font-heading font-bold text-2xl xs:text-3xl sm:text-4xl text-brand-ink mb-4">
+            <span className="sm:hidden">
+              {lang === "en"
+                ? "Patient Reviews & Stories"
+                : lang === "ta"
+                ? "நோயாளிகளின் கருத்துகள்"
+                : t.reviewsTitle}
+            </span>
+            <span className="hidden sm:inline">{t.reviewsTitle}</span>
           </h2>
           <p className="text-brand-muted text-sm sm:text-base">
             {t.reviewsDesc}

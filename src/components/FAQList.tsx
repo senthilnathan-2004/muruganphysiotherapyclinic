@@ -61,7 +61,16 @@ export default function FAQList({ faqs, lang }: FAQListProps) {
             <HelpCircle className="w-4 h-4 text-teal" />
             <span>{t.faqBadge}</span>
           </div>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-brand-ink mb-4">{t.faqTitle}</h2>
+          <h2 className="font-heading font-bold text-2xl xs:text-3xl sm:text-4xl text-brand-ink mb-4">
+            <span className="sm:hidden">
+              {lang === "en"
+                ? "Frequently Asked Questions"
+                : lang === "ta"
+                ? "அடிக்கடி கேட்கப்படும் கேள்விகள்"
+                : t.faqTitle}
+            </span>
+            <span className="hidden sm:inline">{t.faqTitle}</span>
+          </h2>
           <p className="text-brand-muted text-sm sm:text-base">{t.faqDesc}</p>
         </motion.div>
 

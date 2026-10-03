@@ -130,8 +130,17 @@ export default function About({ settings, lang }: AboutProps) {
                 <ShieldCheck className="w-4 h-4 text-teal" />
                 <span>{a("aboutBadge")}</span>
               </div>
-              <h2 className="font-heading font-bold text-2xl sm:text-3xl lg:text-4xl text-brand-ink mb-6 leading-tight">
-                {a("aboutTitle")}
+              <h2 className="font-heading font-bold text-xl xs:text-2xl sm:text-3xl lg:text-4xl text-brand-ink mb-4 sm:mb-6 leading-tight">
+                <span className="sm:hidden">
+                  {lang === "en"
+                    ? "Dedicated Physiotherapy & Rehab"
+                    : lang === "ta"
+                    ? "முழுமையான பிசியோதெரபி சிகிச்சை"
+                    : a("aboutTitle")}
+                </span>
+                <span className="hidden sm:inline">
+                  {a("aboutTitle")}
+                </span>
               </h2>
               <p className="text-brand-muted text-sm sm:text-base leading-relaxed mb-6">{a("aboutDesc1")}</p>
               <p className="text-brand-muted text-sm sm:text-base leading-relaxed">{a("aboutDesc2")}</p>

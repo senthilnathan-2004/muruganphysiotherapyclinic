@@ -100,7 +100,16 @@ export default function Contact({ settings, lang }: ContactProps) {
             <MessageSquare className="w-4 h-4 text-teal" />
             <span>{t.contactBadge}</span>
           </div>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-brand-ink mb-4">{t.contactTitle}</h2>
+          <h2 className="font-heading font-bold text-2xl xs:text-3xl sm:text-4xl text-brand-ink mb-4">
+            <span className="sm:hidden">
+              {lang === "en"
+                ? "Contact Our Clinic"
+                : lang === "ta"
+                ? "எங்களைத் தொடர்பு கொள்ள"
+                : t.contactTitle}
+            </span>
+            <span className="hidden sm:inline">{t.contactTitle}</span>
+          </h2>
           <p className="text-brand-muted text-sm sm:text-base">{t.contactDesc}</p>
         </motion.div>
 
