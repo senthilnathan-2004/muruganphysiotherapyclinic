@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Award, Calendar, Star, ShieldCheck, Stethoscope, Activity, ArrowRight, Sparkles } from "lucide-react";
+import { Award, Calendar, Star, ShieldCheck, Stethoscope, Activity, ArrowRight } from "lucide-react";
 import { translations, Language } from "@/lib/translations";
 
 interface HeroProps {
@@ -116,17 +116,6 @@ export default function Hero({ settings, lang }: HeroProps) {
 
         {/* Mobile View Half-Round Infinite Scrolling Showcase (Visible ONLY on mobile/tablet < lg) */}
         <div className="lg:hidden w-full my-4 xs:my-5 select-none overflow-hidden">
-          {/* Subtle header hint */}
-          <div className="flex items-center justify-between mb-2.5 px-0.5">
-            <div className="flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-white drop-shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-navy animate-pulse" />
-              <span>{lang === "en" ? "Clinic & Therapy Care" : "சிறப்பு சிகிச்சைகள்"}</span>
-            </div>
-            <span className="text-[10px] font-semibold text-white/90 bg-white/20 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/30 shadow-xs">
-              {lang === "en" ? "Live Stream" : "தானியங்கி உலாவி"}
-            </span>
-          </div>
-
           {/* Full-bleed edge-to-edge container with side gradient fade masks */}
           <div className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
             <div className="flex gap-3.5 w-max animate-hero-scroll hover:[animation-play-state:paused] active:[animation-play-state:paused]">
