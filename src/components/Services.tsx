@@ -56,7 +56,16 @@ export default function Services({ services, lang }: ServicesProps) {
             <ShieldCheck className="w-4 h-4 text-teal" />
             <span>{t.servicesBadge}</span>
           </div>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-brand-ink mb-4">{t.servicesTitle}</h2>
+          <h2 className="font-heading font-bold text-2xl xs:text-3xl sm:text-4xl text-brand-ink mb-4">
+            <span className="sm:hidden">
+              {lang === "en"
+                ? "Physiotherapy Treatments"
+                : lang === "ta"
+                ? "ஃபிசியோதெரபி சிகிச்சைகள்"
+                : t.servicesTitle}
+            </span>
+            <span className="hidden sm:inline">{t.servicesTitle}</span>
+          </h2>
           <p className="text-brand-muted text-sm sm:text-base">{t.servicesDesc}</p>
         </motion.div>
 

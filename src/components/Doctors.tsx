@@ -69,7 +69,16 @@ export default function Doctors({ doctors, lang }: DoctorsProps) {
             <Shield className="w-4 h-4 text-teal" />
             <span>{t.doctorsBadge}</span>
           </div>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-brand-ink mb-4">{t.doctorsTitle}</h2>
+          <h2 className="font-heading font-bold text-2xl xs:text-3xl sm:text-4xl text-brand-ink mb-4">
+            <span className="sm:hidden">
+              {lang === "en"
+                ? "Physiotherapy Specialists"
+                : lang === "ta"
+                ? "ஃபிசியோதெரபி நிபுணர்கள்"
+                : t.doctorsTitle}
+            </span>
+            <span className="hidden sm:inline">{t.doctorsTitle}</span>
+          </h2>
           <p className="text-brand-muted text-sm sm:text-base">{t.doctorsDesc}</p>
         </motion.div>
 
