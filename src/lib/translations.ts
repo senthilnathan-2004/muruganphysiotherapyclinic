@@ -72,7 +72,7 @@ export const translations = {
     reviewsDesc: "Read honest reviews from patients who received care at Murugan Physio Clinic.",
     reviewsVerified: "Verified Patient",
     galleryBadge: "Clinic Facilities & Events",
-    galleryTitle: "A Tour of Our State-of-the-Art Clinic",
+    galleryTitle: "A Tour of Our State of the Art Clinic",
     galleryDesc: "View photos of our treatment rooms, rehabilitation exercise area, and clinic facilities.",
     blogBadge: "Health Tips & Articles",
     blogTitle: "Physiotherapy & Recovery Guidelines",

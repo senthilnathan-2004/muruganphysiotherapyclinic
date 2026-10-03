@@ -76,7 +76,7 @@ export default function MainHome({
         <Testimonials reviews={reviews} lang={lang} />
 
         <SectionTicker
-          words={["Modern Treatment Rooms", "Rehabilitation Exercise Area", "State-of-the-Art Operations", "Virtual Tour"]}
+          words={["Modern Treatment Rooms", "Rehabilitation Exercise Area", "State of the Art Operations", "Virtual Tour"]}
           reverse={true}
           bgColor="bg-brand-blush/20"
           textColor="text-pink-safe"

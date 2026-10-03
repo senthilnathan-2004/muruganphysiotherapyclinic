@@ -66,7 +66,7 @@ export default function AllGalleryView({ gallery }: AllGalleryViewProps) {
               Murugan Physio Clinic Media Library
             </h1>
             <p className="text-brand-muted text-sm mt-2">
-              Explore our state-of-the-art diagnostic machines, consulting rooms, and clinic ambiance.
+              Explore our state of the art diagnostic machines, consulting rooms, and clinic ambiance.
             </p>
           </div>
 
