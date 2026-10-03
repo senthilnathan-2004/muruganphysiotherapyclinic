@@ -1,0 +1,17 @@
+import mongoose, { Schema } from "mongoose";
+
+const BlogPostSchema = new Schema(
+  {
+    title: { type: String, required: true },
+    content: { type: String, required: true },
+    image: { type: String, default: "" },
+    category: { type: String, default: "General Health" },
+    author: { type: String, default: "Murugan Physio Specialist" },
+    tags: [{ type: String }],
+  },
+  { timestamps: true }
+);
+
+BlogPostSchema.index({ createdAt: -1 });
+
+export default mongoose.models.BlogPost || mongoose.model("BlogPost", BlogPostSchema);
