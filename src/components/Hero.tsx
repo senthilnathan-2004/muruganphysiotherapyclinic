@@ -63,7 +63,7 @@ export default function Hero({ settings, lang }: HeroProps) {
   return (
     <section
       id="home"
-      className="relative min-h-[71vh] sm:min-h-0 lg:min-h-[calc(100vh-3.5rem)] flex flex-col justify-between pt-6 sm:pt-14 lg:pt-16 mt-14 sm:mt-16 overflow-hidden pb-6 sm:pb-14 lg:pb-12 scroll-mt-14 sm:scroll-mt-16"
+      className="relative min-h-[71vh] sm:min-h-0 lg:min-h-[calc(100vh-3.5rem)] flex flex-col justify-between pt-12 sm:pt-16 lg:pt-20 mt-14 sm:mt-16 overflow-hidden pb-12 sm:pb-16 lg:pb-20 scroll-mt-14 sm:scroll-mt-16"
     >
       {/* Background Image — plain <img> bypasses Next.js optimizer → zero quality loss */}
       <div className="absolute inset-0 z-0 w-full h-full">
@@ -103,7 +103,7 @@ export default function Hero({ settings, lang }: HeroProps) {
           </p>
 
           {/* Primary Action Button */}
-          <div className="mb-3 sm:mb-8">
+          <div className="mb-4 sm:mb-8">
             <Link
               href="#booking"
               className="inline-flex items-center gap-2.5 bg-teal hover:bg-teal-dark text-white px-7 py-3.5 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer"
@@ -115,7 +115,7 @@ export default function Hero({ settings, lang }: HeroProps) {
         </div>
 
         {/* Mobile View Half-Round Infinite Scrolling Showcase (Visible ONLY on mobile/tablet < lg) */}
-        <div className="lg:hidden w-full my-2.5 xs:my-3 select-none overflow-hidden">
+        <div className="lg:hidden w-full my-4 xs:my-5 select-none overflow-hidden">
           {/* Full-bleed edge-to-edge container with side gradient fade masks */}
           <div className="relative -mx-4 px-4 sm:-mx-6 sm:px-6 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
             <div className="flex gap-3.5 w-max animate-hero-scroll hover:[animation-play-state:paused] active:[animation-play-state:paused]">
@@ -167,7 +167,7 @@ export default function Hero({ settings, lang }: HeroProps) {
         </div>
 
         {/* Bottom Feature Badges Bar (Heltro style 4 white pills) */}
-        <div className="mt-2.5 sm:mt-8 pt-1 sm:pt-2">
+        <div className="mt-4 sm:mt-8 pt-2 sm:pt-3">
           <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2.5 sm:gap-3">
             {featurePills.map((pill, idx) => {
               const Icon = pill.icon;
