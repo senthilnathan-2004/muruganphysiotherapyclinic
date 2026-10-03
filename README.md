@@ -1,4 +1,4 @@
-# 🏥 Murugan Physiotherapy Clinic (முருகன் பிசியோதெரபி கிளினிக்)
+Murugan Physiotherapy Clinic 
 
 [![Next.js 15](https://img.shields.io/badge/Next.js-15.0.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![React 18](https://img.shields.io/badge/React-18.3.1-blue?style=for-the-badge&logo=react)](https://reactjs.org/)
@@ -11,7 +11,7 @@
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Overview & Clinic Information](#-overview--clinic-information)
 - [Key Features](#-key-features)
@@ -36,7 +36,7 @@
 
 ---
 
-## 🏥 Overview & Clinic Information
+## Overview & Clinic Information
 
 **Murugan Physiotherapy Clinic** provides specialized orthopaedic physiotherapy, stroke & paralysis rehabilitation, joint mobilization, electrotherapy, and certified home visit healthcare.
 
@@ -50,7 +50,7 @@
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 ### Patient Experience (Frontend)
 
@@ -101,7 +101,7 @@ Access route: `/admin` (Secured via NextAuth.js credentials provider):
 
 ---
 
-## 🛠️ Architecture & Tech Stack
+## Architecture & Tech Stack
 
 ```mermaid
 graph TD
@@ -147,7 +147,7 @@ graph TD
 
 ---
 
-## 📁 Project Directory Structure
+## Project Directory Structure
 
 ```text
 ├── public/                     # Static media assets (logo, fallback banner)
@@ -191,7 +191,7 @@ graph TD
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -279,7 +279,7 @@ Access the Admin Dashboard at **[http://localhost:3000/admin](http://localhost:3
 
 ---
 
-## 🧪 Testing & Quality Assurance
+## Testing & Quality Assurance
 
 The codebase includes comprehensive unit testing via **Vitest** and end-to-end testing via **Playwright**:
 
@@ -302,7 +302,7 @@ npm run test:e2e
 
 ---
 
-## 🌐 API Routes Reference
+## API Routes Reference
 
 | Method | Endpoint | Access | Purpose |
 | :--- | :--- | :--- | :--- |
@@ -320,7 +320,7 @@ npm run test:e2e
 
 ---
 
-## 🔍 SEO & Structured Data
+## SEO & Structured Data
 
 Engineered with complete Schema.org JSON-LD structured data in [`src/lib/seo.ts`](src/lib/seo.ts):
 
@@ -332,7 +332,7 @@ Engineered with complete Schema.org JSON-LD structured data in [`src/lib/seo.ts`
 
 ---
 
-## 🛡️ Security & Performance Engineering
+## Security & Performance Engineering
 
 - **No Mass Assignment:** All update routes (`/api/settings`, `/api/doctors`, etc.) use strict Zod parsing to strip internal fields (`_id`, `__v`, `createdAt`, `role`).
 - **Rate Limiting:** Protects `/api/appointments` and `/api/contact` against spam bots and brute-force attempts.
@@ -342,7 +342,7 @@ Engineered with complete Schema.org JSON-LD structured data in [`src/lib/seo.ts`
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 ### Deploying to Vercel
 
@@ -356,7 +356,7 @@ The repository includes a ready-to-use [`vercel.json`](vercel.json) configuring 
 
 ---
 
-## 👨‍⚕️ Author & Credits
+## Author & Credits
 
 - **Chief Physiotherapist:** Dr. G. Murugan, M.P.T. (Ortho), B.P.T., MIAP
 - **Engineering & Development:** Antigravity AI Engineering Team
