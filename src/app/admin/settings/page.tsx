@@ -334,7 +334,7 @@ export default function AdminSettingsPage() {
                     </div>
 
                     {/* Half-Round Architectural Preview */}
-                    <div className="relative mx-auto w-28 h-40 rounded-t-[56px] rounded-b-[16px] overflow-hidden border-2 border-slate-300 shadow-md bg-white">
+                    <div className="relative mx-auto w-28 h-36 rounded-t-[56px] rounded-b-[16px] overflow-hidden border-2 border-slate-300 shadow-md bg-white">
                       {/* Ambient backdrop */}
                       <div className="absolute inset-0 overflow-hidden pointer-events-none">
                         {/* eslint-disable-next-line @next/next/no-img-element */}

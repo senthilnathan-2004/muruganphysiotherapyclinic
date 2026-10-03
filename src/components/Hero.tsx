@@ -133,7 +133,7 @@ export default function Hero({ settings, lang }: HeroProps) {
               {scrollItems.map((item, idx) => (
                 <div
                   key={idx}
-                  className="relative shrink-0 w-[138px] xs:w-[155px] h-[195px] xs:h-[220px] rounded-t-[68px] rounded-b-[20px] overflow-hidden border-2 border-white/90 shadow-2xl bg-white group transition-transform active:scale-95"
+                  className="relative shrink-0 w-[138px] xs:w-[155px] h-[170px] xs:h-[190px] rounded-t-[68px] rounded-b-[20px] overflow-hidden border-2 border-white/90 shadow-2xl bg-white group transition-transform active:scale-95"
                 >
                   {/* Ambient backdrop */}
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -147,7 +147,7 @@ export default function Hero({ settings, lang }: HeroProps) {
                   </div>
 
                   {/* Centered Main Image — scaled comfortably so nothing hides below text */}
-                  <div className="absolute inset-x-0 top-0 bottom-8 xs:bottom-9 flex items-center justify-center p-2.5 pt-3.5 z-10 overflow-hidden">
+                  <div className="absolute inset-x-0 top-0 bottom-7 xs:bottom-8 flex items-center justify-center p-2 pt-2.5 z-10 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={item.imageUrl || "/herobanner.jpg"}
@@ -161,14 +161,14 @@ export default function Hero({ settings, lang }: HeroProps) {
                   </div>
 
                   {/* Half-Round Arch Top Glass Highlight */}
-                  <div className="absolute inset-x-0 top-0 h-10 rounded-t-[68px] bg-gradient-to-b from-white/35 via-white/10 to-transparent pointer-events-none z-20" />
+                  <div className="absolute inset-x-0 top-0 h-9 rounded-t-[68px] bg-gradient-to-b from-white/35 via-white/10 to-transparent pointer-events-none z-20" />
 
                   {/* Bottom Dark Vignette Gradient */}
-                  <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent pointer-events-none z-20" />
+                  <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent pointer-events-none z-20" />
 
                   {/* Caption Pill at bottom */}
                   {item.caption && (
-                    <div className="absolute bottom-2 inset-x-1.5 text-center pointer-events-none z-30">
+                    <div className="absolute bottom-1.5 inset-x-1.5 text-center pointer-events-none z-30">
                       <span className="inline-block max-w-full px-2.5 py-0.5 rounded-full text-[10px] xs:text-[11px] font-bold text-white bg-slate-950/85 backdrop-blur-md border border-white/30 truncate shadow-xs">
                         {item.caption}
                       </span>
