@@ -119,7 +119,7 @@ export default function Hero({ settings, lang }: HeroProps) {
           {/* Subtle header hint */}
           <div className="flex items-center justify-between mb-2.5 px-0.5">
             <div className="flex items-center gap-1.5 text-[11px] font-bold tracking-wider uppercase text-white drop-shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-skyblue animate-pulse" />
+              <Sparkles className="w-3.5 h-3.5 text-blue-400 animate-pulse" />
               <span>{lang === "en" ? "Clinic & Therapy Care" : "சிறப்பு சிகிச்சைகள்"}</span>
             </div>
             <span className="text-[10px] font-semibold text-white/90 bg-white/20 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/30 shadow-xs">
