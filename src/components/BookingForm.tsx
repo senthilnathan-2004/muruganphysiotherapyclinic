@@ -275,6 +275,16 @@ export default function BookingForm({ doctors, lang }: BookingFormProps) {
     loadAvailability(selectedDoctor, selectedDate);
   }, [selectedDoctor, selectedDate, setValue, loadAvailability]);
 
+  useEffect(() => {
+    const handlePrefill = (e: any) => {
+      if (e.detail?.reason) {
+        setValue("visitReason", e.detail.reason, { shouldValidate: true });
+      }
+    };
+    window.addEventListener("prefill-booking-reason", handlePrefill);
+    return () => window.removeEventListener("prefill-booking-reason", handlePrefill);
+  }, [setValue]);
+
   const slotsReady = Boolean(selectedDoctor && selectedDate);
   const noSlotsFree = slotsReady && !slotsLoading && slots.length > 0 && slots.every((s) => !s.available);
 

@@ -10,6 +10,7 @@ import { Language } from "@/lib/translations";
 const About = dynamic(() => import("@/components/About"));
 const Doctors = dynamic(() => import("@/components/Doctors"));
 const Services = dynamic(() => import("@/components/Services"));
+const InteractiveBodyMap = dynamic(() => import("@/components/InteractiveBodyMap"));
 const BookingForm = dynamic(() => import("@/components/BookingForm"));
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const GalleryGrid = dynamic(() => import("@/components/GalleryGrid"));
@@ -57,6 +58,8 @@ export default function MainHome({
         <Doctors doctors={doctors} lang={lang} />
 
         <Services services={services} lang={lang} />
+
+        <InteractiveBodyMap lang={lang} />
 
         <SectionTicker
           words={["Quick Scheduling", "WhatsApp Bookings", "Instant Confirmation", "Easy Online Booking"]}
