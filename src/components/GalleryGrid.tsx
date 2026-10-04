@@ -10,7 +10,6 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowRight,
-  Sparkles,
 } from "lucide-react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -206,14 +205,6 @@ export default function GalleryGrid({ gallery, lang }: GalleryGridProps) {
           <p className="text-brand-muted text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
             {t.galleryDesc}
           </p>
-          <div className="mt-2.5 inline-flex items-center gap-1.5 text-teal text-xs font-medium">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>
-              {lang === "en"
-                ? "Swipe, drag, or click any card to focus"
-                : "படங்களை கிளிக் செய்து அல்லது நகர்த்திப் பார்க்கவும்"}
-            </span>
-          </div>
         </motion.div>
 
         {/* 3D Coverflow Perspective Stage */}
