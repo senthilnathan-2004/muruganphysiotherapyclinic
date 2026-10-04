@@ -29,9 +29,23 @@ export default function CustomDatePicker({
 
   const initDate = value ? new Date(value + "T00:00:00") : (minDate || today);
   const [open, setOpen] = useState(false);
+  const [openUpwards, setOpenUpwards] = useState(false);
   const [viewYear, setViewYear] = useState(initDate.getFullYear());
   const [viewMonth, setViewMonth] = useState(initDate.getMonth());
   const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (open && ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      const spaceBelow = window.innerHeight - rect.bottom;
+      // Calendar height is ~310px. If not enough space below and more space above, open upwards
+      if (spaceBelow < 320 && rect.top > spaceBelow) {
+        setOpenUpwards(true);
+      } else {
+        setOpenUpwards(false);
+      }
+    }
+  }, [open]);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -100,7 +114,11 @@ export default function CustomDatePicker({
       </button>
 
       {open && (
-        <div className="absolute z-50 mt-1.5 bg-white border border-brand-border rounded-2xl shadow-xl p-4 w-72">
+        <div
+          className={`absolute z-[100] ${
+            openUpwards ? "bottom-full mb-2" : "top-full mt-2"
+          } right-0 sm:left-0 bg-white border border-brand-border rounded-2xl shadow-2xl p-4 w-72 max-w-[calc(100vw-2.5rem)]`}
+        >
           {/* Month/Year Navigation */}
           <div className="flex items-center justify-between mb-3">
             <button type="button" onClick={prevMonth} className="p-1.5 rounded-lg hover:bg-teal-tint text-brand-muted hover:text-teal transition-colors cursor-pointer">

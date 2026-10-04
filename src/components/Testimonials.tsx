@@ -277,7 +277,7 @@ export default function Testimonials({ reviews, lang }: TestimonialsProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
 
           {/* Left card: Aesthetic commitment block */}
-          <div className="bg-gradient-to-br from-brand-blush/80 via-white to-teal-tint/30 rounded-3xl p-5 sm:p-10 border border-brand-border flex flex-col justify-between shadow-sm relative overflow-hidden">
+          <div className="hidden md:flex bg-gradient-to-br from-brand-blush/80 via-white to-teal-tint/30 rounded-3xl p-5 sm:p-10 border border-brand-border flex-col justify-between shadow-sm relative overflow-hidden">
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-teal-tint/40 rounded-full blur-3xl" />
             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-brand-blush/60 rounded-full blur-3xl" />
 
